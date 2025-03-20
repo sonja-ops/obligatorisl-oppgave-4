@@ -41,6 +41,9 @@ section {
   gap: 16px;
 }
 
+.finished{
+  text-decoration: line-through;
+}
 /* FOOTER */
 footer {
   display: flex;

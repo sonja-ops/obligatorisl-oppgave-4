@@ -28,9 +28,46 @@ convertButton.addEventListener("click", function () {
 
 const addTodo = document.querySelector("#addTodo");
 
-addTodo.addEventListener("click", function () {
+addTodo.addEventListener("click", function (avent) {
+  avent.preventDefault();
   console.log("Knappen er trykket!");
+
+  const userInput = document.querySelector("#userInput").value;
+  console.log(userInput);
+
+  const todoList = document.querySelector("#todoList");
+  const todoItem = document.createElement("li");
+
+  todoItem.textContent = userInput;
+
+  todoList.appendChild(todoItem);
+
+
+  const deleteButton = document.createElement("button");
+
+  deleteButton.textContent = "Slett";
+  
+  todoItem.appendChild(deleteButton);
+
+  deleteButton.addEventListener("click", function() {
+    console.log("Slett kapp er trukket");
+
+    todoItem.remove()
+  });
+   
+  const finishButton = document.createElement("button");
+
+  finishButton.textContent = "ferdig";
+  
+  todoItem.appendChild(finishButton);
+
+  finishButton.addEventListener("click", function() {
+    console.log("Ferdig kapp er trukket");
+
+    todoItem.classList.add("finished");
+  });
+
 });
 
-const unitInputValue=unitInput.value;
-console.log(unitInputValue);
+
+

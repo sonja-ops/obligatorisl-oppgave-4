@@ -42,6 +42,8 @@ addTodo.addEventListener("click", function (avent) {
 
   todoList.appendChild(todoItem);
 
+  document.querySelector("#userInput").value = "";
+
 
   const deleteButton = document.createElement("button");
 

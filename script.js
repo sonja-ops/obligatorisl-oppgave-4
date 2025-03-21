@@ -52,9 +52,10 @@ addTodo.addEventListener("click", function (avent) {
   todoItem.appendChild(deleteButton);
 
   deleteButton.addEventListener("click", function() {
-    console.log("Slett kapp er trukket");
+    console.log("Slett knapp er trukket");
 
     todoItem.remove()
+
   });
    
   const finishButton = document.createElement("button");
